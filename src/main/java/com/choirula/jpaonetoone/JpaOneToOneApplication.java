@@ -28,8 +28,8 @@ public class JpaOneToOneApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// Clean up database tables
-//		userProfileRepository.deleteAllInBatch();
-//		userRepository.deleteAllInBatch();
+		userProfileRepository.deleteAllInBatch();
+		userRepository.deleteAllInBatch();
 
 		// Create a User instance
 		User user = new User("Rose", "Darega", "dirose@gmail.com", "rosrose");
