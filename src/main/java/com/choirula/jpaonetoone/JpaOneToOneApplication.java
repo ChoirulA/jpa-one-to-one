@@ -28,18 +28,18 @@ public class JpaOneToOneApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// Clean up database tables
-		userProfileRepository.deleteAllInBatch();
-		userRepository.deleteAllInBatch();
+//		userProfileRepository.deleteAllInBatch();
+//		userRepository.deleteAllInBatch();
 
 		// Create a User instance
-		User user = new User("Choirul", "Andriansyah", "choirul@gmail.com", "choi1234");
+		User user = new User("Rose", "Darega", "dirose@gmail.com", "rosrose");
 
 		Calendar dateOfBirth = Calendar.getInstance();
-		dateOfBirth.set(1998,9,21);
+		dateOfBirth.set(1995,5,10);
 
-		UserProfile userProfile = new UserProfile("+62 82234282989", Gender.MALE, dateOfBirth.getTime(),
-				"774", "Block-M", "Jalan Alamanda", "Bantul",
-				"Yogyakarta", "Indonesia", "63351");
+		UserProfile userProfile = new UserProfile("+458998983921", Gender.FEMALE, dateOfBirth.getTime(),
+				"Y7H", "Hunjiin-Gong", "Jo-Hyun Street", "Seongnam",
+				"Hyundai", "South Korea", "7829");
 
 		// Set child reference(userProfile) in parent entity(user)
 		user.setUserProfile(userProfile);
